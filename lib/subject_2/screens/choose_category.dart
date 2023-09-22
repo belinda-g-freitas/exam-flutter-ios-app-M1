@@ -19,7 +19,7 @@ class _ChooseCategoryState extends State<ChooseCategory> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(widget.title['flag'] + widget.title['country'], style: TextStyle(color: Theme.of(context).iconTheme.color)),
+        title: Text(widget.title['flag'] + ' ' + widget.title['country'], style: TextStyle(color: Theme.of(context).iconTheme.color)),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -118,8 +118,11 @@ class _ChooseCategoryState extends State<ChooseCategory> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  CategoryScreen(category: {'img': 'assets/images/img8.png', 'category': list[i]}, language: widget.title)),
+                            builder: (context) => CategoryScreen(
+                              category: {'img': 'assets/images/img8.png', 'category': list[i]},
+                              language: widget.title,
+                            ),
+                          ),
                         );
                       },
                     );
@@ -156,8 +159,11 @@ class _ChooseCategoryState extends State<ChooseCategory> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  CategoryScreen(category: {'img': 'assets/images/img6.png', 'category': list[i]}, language: widget.title)),
+                            builder: (context) => CategoryScreen(
+                              category: {'img': 'assets/images/img6.png', 'category': list[i]},
+                              language: widget.title,
+                            ),
+                          ),
                         );
                       },
                     );

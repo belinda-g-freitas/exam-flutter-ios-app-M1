@@ -30,7 +30,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset(widget.img, height: 200, fit: BoxFit.cover),
             Center(

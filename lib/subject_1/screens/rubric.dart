@@ -72,12 +72,12 @@ class _RubricScreenState extends State<RubricScreen> {
         alignment: AlignmentDirectional.topCenter,
         children: [
           Positioned(
-            height: 77,
+            height: 105, //77,
             width: width,
             child: AppBar(leading: const BackButton(color: white), title: Text(widget.title), backgroundColor: const Color(0xff2f3641)),
           ),
           Positioned(
-            top: 120,
+            top: 130,//120,
             width: width,
             bottom: 0,
             child: ListView.separated(
@@ -92,7 +92,7 @@ class _RubricScreenState extends State<RubricScreen> {
           ),
           // top menu
           Positioned(
-            top: 60,
+            top: 85, //60,
             height: 35,
             right: -15,
             width: width,

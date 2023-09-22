@@ -1,9 +1,9 @@
 import 'dart:math';
 import 'package:belinda_freitas_examen/constants.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:belinda_freitas_examen/subject_1/screens/rubric.dart';
 import 'package:belinda_freitas_examen/subject_1/widgets/custom_tiles.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 const List<String> _titles = ['EXAMS', 'PROJECTS', 'CLASSES', 'SPORTS', 'GENERAL'];
 
@@ -40,7 +40,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         alignment: AlignmentDirectional.topCenter,
         children: [
           Positioned(
-            height: 92,
+            height: 100, //92
             width: width,
             child: Container(
               decoration: const BoxDecoration(
@@ -110,20 +110,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     child: GridView.builder(
                       padding: const EdgeInsets.only(bottom: 15),
                       itemCount: _cards.length,
-                      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 130,
-                        mainAxisExtent: 110,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisExtent: 125,
                         crossAxisSpacing: 15,
                         mainAxisSpacing: 12,
                       ),
                       itemBuilder: (_, i) => CardTile(
-                          rubrics: _cards[i],
-                          onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RubricScreen(
-                                        title: _cards[i]['text'],
-                                      )))),
+                        rubrics: _cards[i],
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RubricScreen(title: _cards[i]['text'])),
+                        ),
+                      ),
                     ),
                   ),
                 )
@@ -132,7 +131,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
           // top menu
           Positioned(
-            top: 60,
+            top: 85, //60
             height: 60,
             right: -15,
             width: width,

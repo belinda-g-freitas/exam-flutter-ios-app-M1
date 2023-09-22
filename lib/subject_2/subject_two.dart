@@ -1,5 +1,5 @@
-import 'package:belinda_freitas_examen/subject_2/screens/choose_category.dart';
 import 'package:flutter/material.dart';
+import 'package:belinda_freitas_examen/subject_2/screens/choose_category.dart';
 import 'package:belinda_freitas_examen/constants.dart';
 
 class SubjectTwo extends StatefulWidget {
@@ -96,7 +96,7 @@ class _SubjectTwoState extends State<SubjectTwo> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(_data[i]['flag']),
+                          Text('${_data[i]['flag']} '),
                           Text(_data[i]['country'], style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 19))
                         ],
                       ),

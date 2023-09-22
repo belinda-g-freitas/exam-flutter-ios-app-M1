@@ -8,6 +8,7 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         centerTitle: true,
         leading: const Center(child: Text('3/12', style: TextStyle(fontSize: 12))),
@@ -30,7 +31,7 @@ class CategoryScreen extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              Text(language['flag'] + language['country'], style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18)),
+              Text(language['flag'] + ' ' + language['country'], style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18)),
               const SizedBox(height: 15),
               Text.rich(
                 TextSpan(children: [
@@ -64,7 +65,7 @@ class CategoryScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(Icons.slow_motion_video_rounded, size: 22, color: black),
-                      Text('Play slowly', style: TextStyle(fontWeight: FontWeight.w600))
+                      Text(' Play slowly', style: TextStyle(fontWeight: FontWeight.w600))
                     ],
                   ),
                 ),
@@ -93,15 +94,19 @@ class CategoryScreen extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Icon(Icons.play_arrow, size: 22, color: black), Text('Play both', style: TextStyle(fontWeight: FontWeight.w600))],
+                    children: [
+                      Icon(Icons.play_arrow_rounded, size: 22, color: black),
+                      Text('Play both', style: TextStyle(fontWeight: FontWeight.w600))
+                    ],
                   ),
                 ),
               ),
+              const SizedBox(height: 30),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 9),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Expanded(
                         child: MaterialButton(
